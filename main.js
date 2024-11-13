@@ -37,6 +37,7 @@ spinButton.addEventListener("click", async () => {
 
     if (bet > balance) {
       bet = balance;
+      betInput.value = bet;
     }
 
     balance -= bet;
