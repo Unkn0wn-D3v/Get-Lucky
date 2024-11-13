@@ -32,9 +32,13 @@ spinButton.addEventListener("click", async () => {
   spin_functionality: if (!isSpinning) {
     var bet = Number(betInput.value);
 
-    if (bet <= 0) {
+    if (bet < 1) {
       window.alert("Please bet at least 1 KB!");
       break spin_functionality;
+    }
+
+    if (bet > balance) {
+      bet = balance;
     }
 
     balance -= bet;
