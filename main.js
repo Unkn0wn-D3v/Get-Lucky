@@ -6,7 +6,9 @@ const displayThree = document.getElementById("3");
 const betInput = document.getElementById("bet");
 const balanceText = document.getElementById("kimbucks");
 const clearButton = document.getElementById("clearData");
-const slotOptions = ["1", "2", "3", "4", "4", "5", "6", "7", "8", "9", "G"];
+const slotOptions = [
+  /*"1", "2", "3", "4", "4", "5", "6", "7", "8", "9", */ "G",
+];
 
 //Variables
 var spinResult;
