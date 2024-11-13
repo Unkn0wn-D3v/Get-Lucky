@@ -21,9 +21,7 @@ clearButton.addEventListener("click", () => {
   var confirm = window.confirm("Are you sure you want to clear your data?");
 
   if (confirm) {
-    localStorage.clear();
-    balance = 100;
-    setBalanceText();
+    clearAllData();
     window.alert("Your data has been reset");
   }
 });
@@ -147,6 +145,14 @@ spinButton.addEventListener("click", async () => {
 
     balance += reward;
     setBalanceText();
+
+    if (balance < 1) {
+      window.alert(
+        "Your balance has been reduced to an unbettable amount, your data has now been reset."
+      );
+
+      clearAllData();
+    }
   }
 });
 
@@ -167,4 +173,10 @@ function getRandomInt(max) {
 
 function setBalanceText() {
   balanceText.textContent = balance + " KB";
+}
+
+function clearAllData() {
+  localStorage.clear();
+  balance = 100;
+  setBalanceText();
 }
