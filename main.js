@@ -117,27 +117,29 @@ spinButton.addEventListener("click", async () => {
     switch (rolledGs) {
       case 1:
         reward = bet * 2;
-        break spin_functionality;
+        break;
       case 2:
         reward = bet * 5;
-      case 2:
+        break;
+      case 3:
         reward = bet * 15;
+        break;
       default:
+        if (spinResult1 + 1 == spinResult2 && spinResult2 + 1 == spinResult3) {
+          reward = bet * 3;
+        } else if (spinResult1 == spinResult2 && spinResult2 == spinResult3) {
+          reward = bet * 4;
+        } else if (
+          spinResult1 == spinResult2 ||
+          spinResult1 == spinResult3 ||
+          spinResult2 == spinResult3
+        ) {
+          reward = bet * 2;
+        } else {
+          reward = bet * 0;
+        }
     }
 
-    if (spinResult1 + 1 == spinResult2 && spinResult2 + 1 == spinResult3) {
-      reward = bet * 3;
-    } else if (spinResult1 == spinResult2 && spinResult2 == spinResult3) {
-      reward = bet * 4;
-    } else if (
-      spinResult1 == spinResult2 ||
-      spinResult1 == spinResult3 ||
-      spinResult2 == spinResult3
-    ) {
-      reward = bet * 2;
-    } else {
-      reward = bet * 0;
-    }
     reward = Math.floor(reward);
 
     balance += reward;
