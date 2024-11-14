@@ -95,18 +95,21 @@ spinButton.addEventListener("click", async () => {
     clearInterval(interval1);
     if (displayOne.textContent != "G")
       spinResult1 = Number(displayOne.textContent);
+    else spinResult1 = "G";
 
     await sleep(1000);
 
     clearInterval(interval2);
     if (displayTwo.textContent != "G")
       spinResult2 = Number(displayTwo.textContent);
+    else spinResult2 = "G";
 
     await sleep(1000);
 
     clearInterval(interval3);
     if (displayThree.textContent != "G")
       spinResult3 = Number(displayThree.textContent);
+    else spinResult3 = "G";
 
     await sleep(20);
 
