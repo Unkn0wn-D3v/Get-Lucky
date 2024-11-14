@@ -95,3 +95,14 @@
     background-color: grey;
     border: 1px solid black;
 }
+
+.stats-info {
+    position: absolute;
+    left: 38.5%;
+    bottom: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
