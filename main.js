@@ -112,6 +112,19 @@ spinButton.addEventListener("click", async () => {
 
     var reward;
 
+    var rolledGs = countG();
+
+    switch (rolledGs) {
+      case 1:
+        reward = bet * 2;
+        break spin_functionality;
+      case 2:
+        reward = bet * 5;
+      case 2:
+        reward = bet * 15;
+      default:
+    }
+
     if (spinResult1 + 1 == spinResult2 && spinResult2 + 1 == spinResult3) {
       reward = bet * 3;
     } else if (spinResult1 == spinResult2 && spinResult2 == spinResult3) {
@@ -174,5 +187,15 @@ function setMaxBalanceText() {
 function clearAllData() {
   localStorage.clear();
   balance = 100;
+  localStorage.setItem("highestBalance", highestBalance);
   setBalanceText();
+}
+
+function countG() {
+  var numberGs = 0;
+  if (spinResult1 == "G") numberGs++;
+  if (spinResult2 == "G") numberGs++;
+  if (spinResult3 == "G") numberGs++;
+
+  return numberGs;
 }
