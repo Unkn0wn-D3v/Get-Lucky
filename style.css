@@ -111,3 +111,20 @@
     justify-content: center;
     gap: 0px;
 }
+
+.soul-button {
+    height: 30px;
+    width: 150px;
+    font-family: creepy;
+    font-size: 1em;
+    background-color: darkred;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: 'creepy';
+    src: url('./fonts/creepyFont.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
