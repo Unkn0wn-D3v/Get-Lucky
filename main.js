@@ -32,7 +32,20 @@ const slotOptions = [
   "G",
 ];
 
-const boostedOdds = ["6", "6", "6", "6", "6", "G", "G", "G", "G", "G"];
+const boostedOdds = [
+  "6",
+  "6",
+  "6",
+  "6",
+  "6",
+  "6",
+  "6",
+  "G",
+  "G",
+  "G",
+  "G",
+  "G",
+];
 
 //Variables
 var spinResult1;
